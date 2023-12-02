@@ -55,7 +55,7 @@ namespace Book_Store
                 MessageBox.Show("Вы ввели неправильный адрес электронной почты. Пожалуйста, используйте адрес Gmail.");
                 return;
             }
-            if (password.Length < 8 || username.Length < 8)
+            if (password.Length < 8 || username.Length < 8 || PassBox.Text == "" || UsernameBox.Text == "")
             {
                 MessageBox.Show("Ваш пароль или никнейм слишком короткий! Корректный пароль от 8 символов.");
                 return;

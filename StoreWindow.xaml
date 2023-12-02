@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Book_Store"
         mc:Ignorable="d"
-        Title="StoreWindow" Height="450" Width="600" MinHeight="450" MaxHeight="450" MinWidth="600" MaxWidth="600">
+        Title="Магазин" Height="450" Width="600" MinHeight="450" MaxHeight="450" MinWidth="600" MaxWidth="600">
     <Window.Resources>
         <Style x:Key="ListViewItemStyle" TargetType="ListViewItem">
             <Style.Triggers>
@@ -64,7 +64,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="SearchTextBox" Tag="Поиск..." Style="{DynamicResource SearchTextBox}" Text="Поиск..." Grid.Row="0" Height="20" Width="550" LostFocus="TextBox_LostFocus" GotFocus="TextBox_GotFocus" TextChanged="SearchTextBox_TextChanged"/>
+        <TextBox x:Name="SearchTextBox" Tag="Поиск..." Style="{DynamicResource SearchTextBox}" Text="Поиск..." Grid.Row="0" Height="20" Width="400" LostFocus="TextBox_LostFocus" GotFocus="TextBox_GotFocus" TextChanged="SearchTextBox_TextChanged"/>
         <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1">
             <ListView Name="bookListView" SelectionChanged="bookListView_SelectionChanged" ItemContainerStyle="{StaticResource ListViewItemStyle}">
             <ListView.View>

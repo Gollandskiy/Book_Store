@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace Book_Store
 {
@@ -24,5 +25,27 @@ namespace Book_Store
             InitializeComponent();
             DataContext = book;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Open(@"D:\HTML и CSS и JS ШАГ\28.11.2023(Ekz)\GBooks.html");
+        }
+        private void Open(string site)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = site,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при открытии браузера: {ex.Message}");
+            }
+        }
+
+
     }
 }

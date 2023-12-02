@@ -69,9 +69,16 @@ namespace Book_Store
 
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            string searchText = SearchTextBox.Text ?? string.Empty;
+            SearchByTitle(searchText);
         }
         private void SearchByTitle(string searchText)
         {
+            if (books != null)
+            {
+                filteredBooks = books.Where(book => book.Title != null && book.Title.ToLower().Contains(searchText)).ToList();
+                bookListView.ItemsSource = filteredBooks;
+            }
         }
     }
 }
